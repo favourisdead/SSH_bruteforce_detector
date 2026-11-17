@@ -12,7 +12,8 @@ A Python script that analyses SSH authentication logs, counts failed login attem
 1. Download `OpenSSH_2k.log` from [Loghub](https://github.com/logpai/loghub)
 2. Place it in the same folder as the script
 3. Run:
-   python3 ssh_bruteforce_detector.py
+   python3 ssh_bruteforce_detector.py OpenSSH_2k.log
+   Optional flags: -t to set the alert threshold (default 5), -o to set the output file (default report.csv)
 
 ## Output
 [ALERT] 183.62.140.253: 286 failed logins
@@ -24,7 +25,3 @@ A Python script that analyses SSH authentication logs, counts failed login attem
 - Identifying brute-force patterns in authentication logs
 - Exporting findings to CSV for reporting
 
-## Future Improvements
-- Command-line arguments for log file and threshold
-- Time-window detection (e.g. 5 failures in 1 minute)
-- GeoIP lookup for flagged addresses
